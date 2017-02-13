@@ -1,0 +1,59 @@
+/*U css fajlu se definisu stilovi koji se koriste u html fajlovima*/
+
+/*U prvoj lekciji cemo koristiti css klase, kasnije cu objasniti i neke druge metode specifikovanja stilova
+
+css klasa se definise tako sto se navede ime klase sa tackom ispred i onda se u viticastim zagradama specifikuju css atributi
+*/
+
+.body-style{                         /*ovo je jedna klasa*/
+  background-color: #8dafb7;         /*ovim atributom smo setovali boju pozadine, hex vrijednosti boja si vec skontao :) */
+}
+
+/*klasa header-a*/
+.header-style{
+  background-color: #5b787f; /*boja*/
+  position: absolute;        /*absolute znaci da se gleda u odnosu na cijeli ekran. pogledaj ovaj link:https://css-tricks.com/absolute-relative-fixed-positioining-how-do-they-differ/*/
+  height: 10%;                /*visina ce biti 10% od ukupne visine ekrana*/
+  top: 0;                     /*udaljenost od vrha 0 piksela*/
+  left: 0;                    /*udaljenost od od lijeve ivice 0 piksela*/
+  right: 0;                   /*udaljenost od od desne ivice 0 piksela*/
+} /*slobodno mijenjaj vijednosti i vidi sta se desava*/
+
+/*meni bar sa lijeve strane*/
+.side-bar{
+  position: fixed;     /*ako si pogledao link onda ti je jasno sta je fixed. polozaj se ne pomijera ako skrolujes*/
+  top: 10%;            /*pomjereni smo za 10% od vrha zato sto je header visok 10%*/
+  left: 0px;
+  bottom: 0px;
+  width: 10%;           /*sirina menija je 10% ukupne sirine ekrana*/
+  background-color: #2364ce;
+}
+
+/*main content klasom je definisan izgled centralnog dijela aplikacije*/
+.main-content{
+  position: fixed;
+  /*igraj se sa ovim brojevima, slobodno ih mijenjaj*/
+  top: 20%;
+  left: 30%;
+  bottom: 20%;
+  width: 40%;
+  height: 60%;
+  /*ovo je sad jedan trik, ne koristimo img tag za sliku nego setujemo background-image atribut bilo kom div elementu (ili bilo kom drugom)*/
+  background-image: url("../img/slika.jpg");  /*ovo je putanja do slike. ove dvije tacke znace da ako gledamo u odnosu na style.css fajl, moramo se vratiti jedan folder unazad, pa onda na putanji img/slika.jpg
+  se nalazi nasa slika*/
+  background-color: #6d737c; /*ovo je boja pozadine iza slike, jer je slika manja od naseg div elementa*/
+  background-repeat: no-repeat; /*kada je slika manja browser ponavlja sliku dok ne popuni prostor, ovako je to sprijeceno*/
+  background-position: center; /*centriranje slike*/
+  border: solid 2px blue; /*ivica slike, puna linija debljine 2px plave boje*/
+}
+
+/*stil footer*/
+.footer-style{
+  position: absolute;
+  height: 10%; /*visina 10% visine ekrana*/
+  right: 0; /**udaljenost od desne ivic*/
+  bottom: 0; /*udaljenost od dna*/
+  left: 0; /*udaljenost od lijeve ivice*/
+  background-color: #5b787f;
+  text-align: center; /*poravnanje teksta unutar taga*/
+}

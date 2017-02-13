@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- Osnovnu strukturu html dokumenta cine tagovi html, head, body
+1. html tag je glavni tag i svi ostali tagovi se nalaze unutar njega.
+2. head tag se nalazi unutar html taga a prije body taga. U njemu se nalaze podaci koji nisu vidljivi korisniku (osim naslova - title taga), kao sto je naprimjer
+setovanje encoding-a (cirilica, latinica, kineski znakovi, itd.), ukljucivanje css fajlova, ukljucivanje jacascript fajlova itd.
+3.body tag je tag u kome se nalaze svi podaci koje korisnik vidi -->
+
+
+<html>
+  <head>
+    <!-- Ovo je jedan od nevidljivih tagova u kome smo setovali encoding. Ako se ovaj tag i zaboravi, browser ce po default-u postaviti utf-8 -->
+    <meta charset="utf-8">
+    <!-- title tagom smo postavili naslov stranice koji se nalazi u tabu browser-a -->
+    <title>Lesson 1</title>
+    <!-- link tagom smo uljucili style.css fajl u nasu aplikaciju -->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <!-- na body tag cemo setovati klasu body-style koju smo definisali u style.css fajlu -->
+  <body class="body-style">
+    <!-- praksa je da se u HTML verziji 5 (najnovija) dominantno koriste div tagovi -->
+
+<!-- ovim tagom smo opisali header aplikacije. stil koji koristi je definisan u klasi header-style u style.css fajlu -->
+  <div class="header-style">
+    <h1>Header</h1>
+  </div>
+
+<!-- ispod headera se nalazi centralni dio aplikacije koji sadrzi meni i sliku u sredini -->
+  <div>
+    <!-- side bar predstavlja meni sa lijeve strane. kao sto vidis njegov stil je opisan u klasi side-bar -->
+    <div class="side-bar">
+      Menu
+      <!-- ul je tag koji predstavlja nenabrojivu listu (unordered list) -->
+      <ul>
+        <!-- njegovi elementi su li tagovi (list item) -->
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+      </ul>
+    </div>
+
+    <!-- glavni dio je prazan, sva magija je definisana u main-content klasi -->
+    <div class="main-content">
+
+    </div>
+  </div>
+
+<!-- i na kraju footer :) -->
+  <div class="footer-style">
+    Footer
+  </div>
+  </body>
+</html>
+
+<!-- molim te googlaj tagove div, ul, li, ol, body
+ako ti neki css atribut nije jasan googlaj npr css attribute background-color, pronacices objasnjenja -->
+
+<!-- SLOBODNO MIJENJAJ VRIJEDNOSTI ATTRIBUTA U style.css fajlu i gledaj sta se desava -->
